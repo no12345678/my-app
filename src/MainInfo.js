@@ -314,8 +314,8 @@ function MainInfo(props) {
   }, [submitClicked, onSubmitForm]);
 
   const onCloseSnackbar = () => {
-      setOpen(false);
-  }
+    setOpen(false);
+  };
 
   const onChangeCaseNumber = (event) => {
     if (event.target.value !== "") {
@@ -854,10 +854,14 @@ function MainInfo(props) {
         value.month() !== selectedEndDate.month() ||
         value.year() !== selectedEndDate.year())
     ) {
-      setBeginningDateErrorText("בחר תאריך לפני תאריך סיום");
-      if (selectedBeginningDate) {
+      if (
+        !selectedBeginningDate ||
+        (selectedBeginningDate && beginningDateErrorText !== "")
+      ) {
+      } else {
         setNumOfRequiredFieldsToFill((prev) => Math.min(12, prev + 1));
       }
+      setBeginningDateErrorText("בחר תאריך לפני תאריך סיום");
     } else {
       if (beginningDateErrorText !== "") {
         if (endDateErrorText !== "") {
@@ -888,10 +892,11 @@ function MainInfo(props) {
         value.month() !== selectedBeginningDate.month() ||
         value.year() !== selectedBeginningDate.year())
     ) {
-      setEndDateErrorText("בחר תאריך אחרי תאריך התחלה");
-      if (selectedEndDate) {
+      if (!selectedEndDate || (selectedEndDate && endDateErrorText !== "")) {
+      } else {
         setNumOfRequiredFieldsToFill((prev) => Math.min(12, prev + 1));
       }
+      setEndDateErrorText("בחר תאריך אחרי תאריך התחלה");
     } else {
       if (endDateErrorText !== "") {
         if (beginningDateErrorText !== "") {
@@ -1070,9 +1075,7 @@ function MainInfo(props) {
     <ThemeProvider theme={theme}>
       <div className={styles.container}>
         <Snackbar open={open} autoHideDuration={1000} onClose={onCloseSnackbar}>
-          <Alert severity="success">
-            הפעולה בוצעה בהצלחה
-          </Alert>
+          <Alert severity="success">הפעולה בוצעה בהצלחה</Alert>
         </Snackbar>
         <div className={styles.backgroundTitle}>
           <span>פרטי ישות-</span>
