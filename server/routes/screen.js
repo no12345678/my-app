@@ -1,62 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../firebase.config");
-// import db from "./firebase.config";
-
-router.post("/testPost", async (req, res) => {
-  var user = req.body.user;
-});
-
-router.get("/getFromFB", async (req, res) => {
-  db.collection("orders")
-    .doc("dAsos5aCJEHPHwgAxTfS")
-    .get()
-    .then(function (response) {
-      const responseData = response.data();
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-});
-
-router.post("/postToFB", async (req, res) => {
-  var order = req.body.order;
-  //   let userBook = {};
-  //   userBook["authors"] = [authorName];
-  //   userBook["categories"] = null;
-  //   userBook["description"] = description;
-  //   userBook["pageCount"] = pageCount;
-  //   userBook["title"] = bookName;
-  //   userBook["imageLinks"] = { thumbnail: url };
-  //   userBook["publishedDate"] = "";
-  //   userBook["id"] = bookName;
-
-  // db.collection("orders")
-  //   // .doc(bookName)
-  //   .add(order)
-  //   .then(() => {
-  //     console.log("added order");
-  //   })
-  //   .catch((e) => {
-  //     console.log("unable to add new book1");
-  //     setLoading(false);
-  //   });
-});
-
-router.get("/getBranchesFromFB", async (req, res) => {
-  db.collection("branches")
-    .get()
-    .then(function (response) {
-      if (response) {
-        response.docs.map((doc) => {
-          const responseData = doc.data();
-        });
-      }
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-});
 
 router.get("/getInfraFromFB", async (req, res) => {
   Promise.all([

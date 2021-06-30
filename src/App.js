@@ -16,8 +16,6 @@ function App() {
   const [loadingInfra, setLoadingInfra] = useState(true);
   const [loadingCase, setLoadingCase] = useState(true);
   const [infra, setInfra] = useState(null);
-  // const [caseFromFB, setCaseFromFB] = useState(null);
-  // const [caseID, setCaseID] = useState("y0QII1iUdKDZRDrziZON");
   const [casesFromFB, setCasesFromFB] = useState([]);
   const [selectedCase, setSelectedCase] = useState(null);
   const [newCase, setNewCase] = useState(false);
@@ -35,18 +33,6 @@ function App() {
         console.log(error);
       }
     );
-    // fetch(`http://localhost:3000/screen/getCaseFromFB/${caseID}`).then(
-    //   async (result) => {
-    //     if (result) {
-    //       const data = await result.json();
-    //       setCaseFromFB(data);
-    //       setLoadingCase(false);
-    //     }
-    //   },
-    //   (error) => {
-    //     console.log(error);
-    //   }
-    // );
     fetch(`http://localhost:3000/screen/getAllCasesIDs`).then(
       async (result) => {
         if (result) {
