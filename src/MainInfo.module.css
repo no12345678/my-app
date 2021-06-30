@@ -1,0 +1,211 @@
+.container {
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    gap: 8%;
+    position: relative;
+}
+
+.backgroundTitle {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+    font-size: 90px;
+    color: #00bcd4b5;
+}
+
+.rightSide {
+    height: 100%;
+    /* flex: 1; */
+    /* background-color: #ff00001a; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.leftSide {
+    height: 100%;
+    /* flex: 1; */
+    /* background-color: #00800057; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.fullRowField {
+    width: 100%;
+}
+
+.twoFieldsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.halfRowField {
+    width: 45%;
+}
+
+.autoCompleteEndAdornment {
+    margin-left: 40px;
+}
+
+.projectInputContainer {
+    position: relative;
+}
+
+.projectIconContainer {
+    position: absolute;
+    left: 5px;
+    top: 20px;
+}
+
+.optionWrapper {
+    justify-content: flex-end !important;
+}
+
+.noOptionsWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chooseBodiesContainer {
+    display: flex;
+}
+
+.chooseBodiesLabelContainer {
+    width: 30%;
+}
+
+.chooseBodiesLabel {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.chooseBodiesSubLabel {
+    font-size: 12px;
+    width: 90%;
+    margin: auto;
+}
+
+.chooseBodiesOptionsContainer {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.chooseBodiesOption {
+    height: 60px;
+    width: 100px;
+    position: relative;
+}
+
+.bodyCheck {
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    color: green;
+}
+
+.switchLabelContainer {
+    display: flex;
+    align-items: center;
+}
+
+.switchLabelText {
+    margin-left: 5px;
+}
+
+.datePickerRTL {
+    direction: rtl !important;
+}
+
+.currencyOptionsContainer {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
+
+.chooseCurrencyOption {
+    height: 25px;
+    width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caseSumRowContainer {
+    display: flex;
+}
+
+.currencyLabelContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -15px;
+    right: 21px;
+}
+
+.currencyTitle {
+    margin-left: 5px;
+    padding-bottom: 2px;
+    font-size: 12px;
+}
+
+.currencyLabelError {
+    color: #f44336;
+}
+
+.currencyErrorTextContainer {
+    color: #f44336;
+    margin-right: 34px;
+    margin-left: 14px;
+    margin-top: 4px;
+    height: 19px;
+    font-size: 12px;
+    text-align: right;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+}
+
+.currencyIconContainer {
+    display: flex;
+}
+
+.requiredFieldsCounterContainer {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed red;
+    top: -20px;
+    left: 20px;
+}
+
+.formValid {
+    border: 1px solid #73bd82;
+}
+
+.checkIcon {
+    color: #73bd82;
+}
+
+.requiredFieldsCounterText {
+    font-size: 26px;
+    font-weight: bold;
+    color: red;
+}

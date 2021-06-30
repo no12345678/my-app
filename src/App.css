@@ -1,38 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100%;
+  direction: rtl;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bottomBar {
+  height: 50px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainSectionContainer {
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainSectionContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.mainSectionContainer::-webkit-scrollbar-thumb {
+  background: rgb(190, 190, 190);
+  border-radius: 20px;
+}
+
+.mainSectionContainer::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 20px;
+}
+
+.pageContainer {
+  height: 100%;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.spinnerContainer {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.casesContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.chooseOptionTitle {
+  direction: ltr;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.caseOption {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.caseOption:hover {
+  background-color: #0000004a;
+}
+
+.addNewCaseButton {
+  background-color: rgb(40, 85, 207);
+  height: 25px;
+  width: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  user-select: none;
 }
