@@ -112,20 +112,20 @@ function Try() {
             );
           })}{" "}
         </ul>
-        {/* <div id="home" style={{ height: "100vh" }}>
+        <div id="home" style={{ height: "100vh" }}>
           <h1>This is Home section</h1>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
           repellendus. Totam nihil similique a repellat minus dolor amet quasi.
           Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
-        </div> */}
-        <div className="pageContainer" id="home">
+        </div>
+        {/* <div className="pageContainer" id="home">
           <MainInfo
             submitFormClicked={() => {console.log("")}}
             infra={null}
             case={null}
             caseID={null}
           />
-        </div>
+        </div> */}
         <div id="about" style={{ height: "100vh" }}>
           <h1>This is About section</h1>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,

@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Headline = () => {
-  const [greeting, setGreeting] = useState("Hello Function Component!");
+const Headline = (props) => {
 
-  return <h1>{greeting}</h1>;
+  return <h1>{props.title}</h1>;
 };
 
 export default Headline;
